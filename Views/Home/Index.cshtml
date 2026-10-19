@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHÚC NGUYỄN - TỔNG HỢP MẪU SLIDE POWERPOINT ĐẸP</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-orange: #d94d26; /* Màu cam chủ đạo giống hệt trang mẫu */
+            --dark-orange: #b83b19;
+            --green-btn: #5cb85c;      /* Màu xanh lá cho nút TẢI NGAY */
+            --bg-body: #f4f4f4;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+
+        /* 1. Top Navigation Bar trên cùng */
+        .top-header {
+            background-color: var(--primary-orange);
+            padding: 8px 0;
+            color: #fff;
+            font-size: 14px;
+        }
+        .top-header a { color: #fff; text-decoration: none; margin-right: 12px; }
+
+        /* 2. Main Header / Logo & Search */
+        .main-header {
+            background-color: var(--primary-orange);
+            padding: 15px 0 25px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .brand-logo {
+            font-weight: 900;
+            font-size: 26px;
+            color: #fff !important;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .search-box input {
+            border-radius: 4px 0 0 4px;
+            border: none;
+            padding: 10px 15px;
+        }
+        .search-box button {
+            background-color: #fff;
+            color: var(--primary-orange);
+            border: none;
+            border-radius: 0 4px 4px 0;
+            padding: 0 18px;
+            font-size: 16px;
+        }
+
+        /* 3. Menu Điều Hướng */
+        .main-menu {
+            background-color: var(--primary-orange);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .main-menu .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 12px 16px !important;
+            text-transform: uppercase;
+        }
+        .main-menu .nav-link:hover {
+            background-color: var(--dark-orange);
+        }
+
+        /* 4. Breadcrumb Đường Dẫn */
+        .breadcrumb-container {
+            background: #fff;
+            padding: 10px 0;
+            font-size: 13px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .breadcrumb-container a { color: #888; text-decoration: none; }
+
+        /* 5. Khung Mục Lục Bài Viết (TOC) */
+        .toc-box {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 25px 0;
+        }
+        .toc-box h5 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .toc-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .toc-box ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .toc-box ul li a {
+            color: #fca5a5;
+            text-decoration: none;
+        }
+
+        /* 6. Khung Nhúng Google Slides & Xem Trước */
+        .slide-frame-container {
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .slide-preview-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        .slide-preview-wrapper iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+        }
+
+        /* 7. Nút TẢI NGAY Màu Xanh */
+        .btn-tai-ngay {
+            background-color: var(--green-btn);
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 12px 0;
+            width: 100%;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+        .btn-tai-ngay:hover {
+            background-color: #4cae4c;
+            color: #fff;
+        }
+
+        /* 8. Banner Sidebar Bên Phải */
+        .sidebar-banner {
+            background: linear-gradient(180deg, #c0392b 0%, #8e44ad 100%);
+            color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 9. Nút Chat Bong Bóng Trực Tuyến (Góc phải màn hình) */
+        .chat-bubble {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0084ff;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topbar Icon Mạng Xã Hội & Đăng Nhập -->
+    <div class="top-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-solid fa-user me-1"></i> Đăng nhập</a>
+                <a href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Giỏ hàng (0)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Logo Thương Hiệu "PHÚC NGUYỄN" & Ô Tìm Kiếm -->
+    <div class="main-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="brand-logo">
+                <i class="fa-solid fa-paper-plane me-2"></i>PHÚC NGUYỄN
+            </a>
+
+            <div class="d-flex search-box w-50">
+                <input class="form-control" type="search" placeholder="Tìm tên mẫu Slide thuyết trình / Thiết kế Ấn phẩm">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thanh Menu Chính -->
+    <nav class="navbar navbar-expand-lg main-menu sticky-top p-0">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Mẫu Slide Thuyết Trình</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Mẫu Thiết Kế Ấn Phẩm</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dịch Vụ Thiết Kế</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tài Nguyên Download Miễn Phí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Góc Kiến Thức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Đường Dẫn Breadcrumb -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <a href="#">Trang Chủ</a> / <a href="#">Tin Tổng hợp</a> / <span>Ở ĐÂY CÓ SLIDE ĐẸP VÀ PHÙ HỢP VỚI BẠN</span>
+        </div>
+    </div>
+
+    <!-- Bố Cục Nội Dung Chính -->
+    <div class="container my-4">
+        <div class="row g-4">
+            
+            <!-- Cột Trái (Bài Viết Chính) -->
+            <div class="col-lg-8 bg-white p-4 rounded-2 border">
+                
+                <!-- Tiêu Đề Theo Yêu Cầu -->
+                <h1 class="fw-bold fs-3 text-uppercase text-dark mb-3">
+                    Ở ĐÂY CÓ SLIDE ĐẸP VÀ PHÙ HỢP VỚI BẠN
+                </h1>
+                
+                <p class="text-muted fs-6">
+                    Phúc Nguyễn mang đến cho bạn nhiều mẫu slide thuyết trình đẹp thuộc nhiều chủ đề khác nhau: từ Đội - Đoàn - Đảng, Báo cáo Giáo dục, Lịch sử đến Doanh nghiệp và Marketing.
+                </p>
+
+                <!-- Khung Mục Lục Bài Viết (Table of Contents màu đen) -->
+                <div class="toc-box">
+                    <h5>Mục lục bài viết:</h5>
+                    <ul>
+                        <li>1. <a href="#">Lý do bạn nên sử dụng mẫu slide PowerPoint có sẵn</a></li>
+                        <li>2. <a href="#">Bộ sưu tập mẫu slide đẹp chọn lọc từ Phúc Nguyễn</a></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;A. <a href="#">Mẫu slide Đội - Đoàn - Đảng - Nhà nước</a></li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;B. <a href="#">Mẫu slide Giáo dục - Môn học</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tiêu Đề Nhỏ 2 -->
+                <h4 class="fw-bold fs-5 mt-4 text-uppercase">
+                    2. BỘ SƯU TẬP MẪU SLIDE POWERPOINT ĐẸP TỪ PHÚC NGUYỄN
+                </h4>
+                
+                <p class="mt-3">
+                    <strong>A. Mẫu slide Đội – Đoàn – Đảng – Nhà nước</strong><br>
+                    Các mẫu này được thiết kế trang trọng, chuẩn phong cách hội nghị và sự kiện chính trị. Rất phù hợp cho Đại hội Đảng, Đại hội Đoàn, Báo cáo công tác, Hội nghị tổng kết...
+                </p>
+
+                <!-- Khung Hiển Thị Slide (Google Slides hoặc Hình ảnh Xem trước) -->
+                <div class="slide-frame-container mt-3">
+                    <div class="slide-preview-wrapper">
+                        <!-- Nhúng link Google Slides của bạn ở thuộc tính src -->
+                        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR___MÃ_EMBED___/embed?start=false&loop=false&delayms=3000" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+                <div class="text-center mt-2 text-muted fw-bold">
+                    <small>Slide Đại hội Cháu Ngoan Bác Hồ</small>
+                </div>
+
+                <!-- Nút TẢI NGAY Màu Xanh Lá -->
+                <a href="#" class="btn-tai-ngay">
+                    <i class="fa-solid fa-download me-2"></i>TẢI NGAY
+                </a>
+
+            </div>
+
+            <!-- Cột Phải (Sidebar Quảng Cáo / Danh Mục Nổi Bật) -->
+            <div class="col-lg-4">
+                
+                <!-- Ô Tìm Sản Phẩm Bên Sidebar -->
+                <div class="bg-white p-3 border rounded-2 mb-4">
+                    <h6 class="fw-bold mb-3 border-bottom pb-2">Tìm sản phẩm</h6>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Điền tên Mẫu PowerPoint...">
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+
+                <!-- Banner Quảng Cáo / Sản Phẩm Nổi Bật -->
+                <div class="sidebar-banner shadow-sm">
+                    <span class="badge bg-warning text-dark mb-2">MẪU SLIDE - BANNER</span>
+                    <h3 class="fw-bold text-uppercase mt-2">MỪNG XUÂN BÍNH NGỌ</h3>
+                    <p class="fs-4 fw-bold">2026</p>
+                    <hr class="border-light">
+                    <p class="small">Tết Cổ Truyền Việt Nam</p>
+                    <a href="#" class="btn btn-light text-danger fw-bold rounded-pill px-4 mt-3">XEM THÊM &rarr;</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bong bóng Chat Messenger Cố Định Góc Phải -->
+    <a href="#" class="chat-bubble" title="Chat hỗ trợ">
+        <i class="fa-brands fa-facebook-messenger"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
